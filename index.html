@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional resume of Saka Lakshmi Pratyusha, an Information Technology graduate with expertise in web development and machine learning.">
+    <meta name="author" content="Saka Lakshmi Pratyusha">
+    <title>Saka Lakshmi Pratyusha - Resume</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0f7fa;
+            color: #2d3748;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 1.2rem;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #80deea, #b39ddb);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 300;
+            color: #f5f5f5;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin: 0.3rem 0;
+        }
+
+        /* Contact Links */
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            margin: 0 1rem;
+        }
+
+        .contact-link:hover {
+            color: #e0f7fa;
+            text-decoration: underline;
+        }
+
+        .contact-link i {
+            margin-right: 0.5rem;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.5rem 0;
+        }
+
+        nav.scrolled .nav-link {
+            font-size: 1.4rem;
+        }
+
+        nav .nav-link {
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, font-size 0.3s ease;
+            padding: 0.75rem 1.25rem;
+        }
+
+        nav .nav-link:hover, nav .nav-link.active {
+            color: #4db6ac;
+        }
+
+        nav .nav-link i {
+            margin-right: 0.5rem;
+            color: #4db6ac;
+        }
+
+        /* Floating Navigation for Large Screens */
+        @media (min-width: 992px) {
+            nav.float {
+                position: fixed;
+                width: 100%;
+                background-color: #ffffff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                padding: 0.5rem;
+            }
+
+            nav.float .navbar-nav {
+                flex-direction: row;
+            }
+
+            nav.float .nav-link {
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 3rem 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            animation: slideInLeft 0.8s ease-in-out;
+            background-color: #e0f7fa; /* Light teal background */
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        section h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background-color: #4db6ac;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        section h2:hover::after {
+            width: 100%;
+        }
+
+        section h2 i {
+            margin-right: 0.5rem;
+            color: #4db6ac;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #4db6ac;
+            margin-bottom: 1rem;
+        }
+
+        .card-title i {
+            margin-right: 0.5rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.5rem 0;
+            font-size: 1.2rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .list-group-item::before {
+            content: '\f00c'; /* Font Awesome checkmark */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #4db6ac;
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+
+        /* Two-column layout for internships and projects */
+        .two-column .card {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 0;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header .tagline {
+                font-size: 1.3rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .card-body {
+                padding: 1.5rem;
+            }
+
+            nav.scrolled .nav-link {
+                font-size: 1.2rem;
+            }
+
+            .two-column .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Accessibility Enhancements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        a:focus, button:focus {
+            outline: 3px solid #4db6ac;
+            outline-offset: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e2e8f0;
+            color: #2d3748;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+        .card-uniform-height{
+            height:360px        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Saka Lakshmi Pratyusha</h1>
+        <p class="tagline"><i class="fas fa-briefcase"></i> Information Technology Graduate | Web Developer | Machine Learning Enthusiast</p>
+        <p>
+            <a href="mailto:kdptsaka@2003" class="contact-link" aria-label="Email Saka Lakshmi Pratyusha"><i class="fas fa-envelope"></i> kdptsaka@2003</a>
+            <a href="tel:+919494570282" class="contact-link" aria-label="Call Saka Lakshmi Pratyusha"><i class="fas fa-phone"></i> +91 9494570282</a>
+            <a href="https://linkedin.com/in/pratyushasaka" class="contact-link" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#summary"><i class="fas fa-user"></i> Professional Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#internships"><i class="fas fa-briefcase"></i> Internships</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills"><i class="fas fa-tools"></i> Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Education -->
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-uniform-height">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-university"></i> B.Tech in Information Technology</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Vignan’s Institute of Engineering for Women</li>
+                                <li class="list-group-item">2021 - 2025</li>
+                                <li class="list-group-item">CGPA: 7.30</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-uniform-height">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-school"></i> Intermediate (PCM)</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Sri Chaitanya College</li>
+                                <li class="list-group-item">2021</li>
+                                <li class="list-group-item">CGPA: 8.5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-uniform-height">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-school"></i> SSC</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Sri Chaitanya School</li>
+                                <li class="list-group-item">2019</li>
+                                <li class="list-group-item">CGPA: 9.2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section id="summary">
+            <h2><i class="fas fa-user"></i> Professional Summary</h2>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Results-driven and detail-oriented Information Technology graduate with hands-on experience in Python programming.</li>
+                        <li class="list-group-item">Built responsive and scalable web platforms using HTML, CSS, JavaScript, and Bootstrap.</li>
+                        <li class="list-group-item">Strong entrepreneurial mindset as the founder of an online jewelry business and content creator for a YouTube channel, demonstrating creativity and customer engagement.</li>
+                        <li class="list-group-item">Adept at working in collaborative environments and solving technical problems.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internships -->
+        <section id="internships">
+            <h2><i class="fas fa-briefcase"></i> Internships</h2>
+            <div class="row two-column">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-laptop-code"></i> Web Development Intern - Internshala</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Coordinated in a team of six to design a food delivery e-commerce website with user-friendly interfaces, responsive design, and reliable systems.</li>
+                                <li class="list-group-item">Developed using HTML, CSS, and JavaScript for seamless access across devices.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-brain"></i> Machine Learning Using Python (Language Detection) - IGIAT</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Feb - Mar 2022</li>
+                                <li class="list-group-item">Developed a language detection project using machine learning techniques.</li>
+                                <li class="list-group-item">Implemented text classification and NLP algorithms using scikit-learn and pandas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="row two-column">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-gamepad"></i> Quiz Application</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Developed a dynamic quiz application using HTML5, CSS3, and JavaScript.</li>
+                                <li class="list-group-item">Implemented responsive UI with semantic markup and mobile-first design.</li>
+                                <li class="list-group-item">Utilized DOM manipulation for dynamic rendering and modular JavaScript for maintainability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-globe"></i> Tourism E-Commerce Website</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Designed a responsive travel website using HTML, CSS, JavaScript, and Bootstrap.</li>
+                                <li class="list-group-item">Implemented user-friendly interface for browsing travel destinations.</li>
+                                <li class="list-group-item">Improved UI/UX with modular design and interactive features.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications">
+            <h2><i class="fas fa-certificate"></i> Workshops and Certifications</h2>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">HTML, JavaScript - Infosys Springboard</li>
+                        <li class="list-group-item">CSS, Bootstrap, JavaScript - Udemy</li>
+                        <li class="list-group-item">Creating Presentations & Analyzing Data Using AI - be10X</li>
+                        <li class="list-group-item">Intro to Machine Learning - NPTEL (IIT Kharagpur)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+            <h2><i class="fas fa-trophy"></i> Achievements</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title"><i class="fas fa-gem"></i> Founder & Content Creator – Tejosh Collections Jewelry Business Channel (YouTube)</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Managed end-to-end business operations, marketing, and customer service.</li>
+                        <li class="list-group-item">Showcased leadership and initiative outside technical domains.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Languages:</strong> Python, Java (Basics), C</li>
+                        <li class="list-group-item"><strong>Web Technologies:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+                        <li class="list-group-item"><strong>Tools:</strong> VS Code, Jupyter Notebook</li>
+                        <li class="list-group-item"><strong>Databases:</strong> SQL (Basics)</li>
+                        <li class="list-group-item"><strong>Soft Skills:</strong> Communication, Adaptability, Teamwork, Time Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><i class="fas fa-copyright"></i> 2025 Saka Lakshmi Pratyusha. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDvM2D4tO5V5lE8fJ8z8j8z8j8z8j8z8j8z8j8z8j8z8j8z8j8z8j8z8j8z" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current nav link and handle scroll effects
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        let navOffsetTop = nav.offsetTop;
+
+        window.addEventListener('scroll', () => {
+            // Navigation font size increase and floating effect on large screens
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            if (window.innerWidth >= 992) {
+                if (window.scrollY >= navOffsetTop) {
+                    nav.classList.add('float');
+                } else {
+                    nav.classList.remove('float');
+                }
+            }
+
+            // Active section highlighting
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 70;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
